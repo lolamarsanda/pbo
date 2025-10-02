@@ -4,7 +4,7 @@ class Mobil {
     this.merek = merek;   // Properti objek
     this.model = model;
     this.tahun = tahun;
-  }
+  } 
 
   // Metode untuk menampilkan informasi mobil
   displayInfo() {
