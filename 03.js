@@ -1,22 +1,54 @@
-public class Main {
-    public static void main(String[] args) {
-        // Object 1
-        Mahasiswa m1 = new Mahasiswa("Nayla", 20, "123456", "Informatika");
-        m1.perkenalan();
-        m1.belajar();
+// 1. Class Induk
+class Mahasiswa {
+  constructor(nama, nim, jurusan, fakultas) {
+    this.nama = nama;       // Attribute
+    this.nim = nim;
+    this.jurusan = jurusan;
+    this.fakultas = fakultas;
+  }
 
-        System.out.println();
-
-        // Object 2
-        Mahasiswa m2 = new Mahasiswa("Ezrina", 21, "654321", "Sistem Informasi");
-        m2.perkenalan();
-        m2.belajar();
-
-        System.out.println();
-
-        // Object 3
-        AsistenLab aslab1 = new AsistenLab("Sabrina", 22, "Pemrograman Java");
-        aslab1.perkenalan();
-        aslab1.membimbing();
-    }
+  // Method untuk menampilkan info dasar mahasiswa
+  displayInfo() {
+    console.log(
+      `Nama: ${this.nama}, NIM: ${this.nim}, Jurusan: ${this.jurusan}, Fakultas: ${this.fakultas}`
+    );
+  }
 }
+
+// 2. Class Anak Pertama (S1)
+class MahasiswaS1 extends Mahasiswa {
+  constructor(nama, nim, jurusan, fakultas, skripsi) {
+    super(nama, nim, jurusan, fakultas); // Panggil constructor induk
+    this.skripsi = skripsi; // Attribute tambahan
+  }
+
+  // Method tambahan
+  displaySkripsi() {
+    console.log(`Mahasiswa S1 ini sedang mengerjakan skripsi: "${this.skripsi}"`);
+  }
+}
+
+// 2. Class Anak Kedua (S2)
+class MahasiswaS2 extends Mahasiswa {
+  constructor(nama, nim, jurusan, fakultas, tesis) {
+    super(nama, nim, jurusan, fakultas);
+    this.tesis = tesis;
+  }
+
+  // Method tambahan
+  displayTesis() {
+    console.log(`Mahasiswa S2 ini sedang menulis tesis berjudul: "${this.tesis}"`);
+  }
+}
+
+// 3. Object dari class induk dan anak
+const mhs1 = new Mahasiswa("Dela", "202001", "Informatika", "FTI");
+const mhs2 = new MahasiswaS1("Syaila", "202002", "Sistem Industri", "FTI", "Sistem Antrian Bank");
+const mhs3 = new MahasiswaS2("Anas", "202003", "Teknik Elektro", "FT", "AI untuk Energi Terbarukan");
+
+// 4. Memanggil method
+mhs1.displayInfo();
+mhs2.displayInfo();
+mhs2.displaySkripsi();
+mhs3.displayInfo();
+mhs3.displayTesis();
