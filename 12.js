@@ -11,7 +11,4 @@ console.log("Daftar Mahasiswa:");
 mahasiswaList.forEach(mhs =>
     console.log(`${mhs.nama} - ${mhs.jurusan}`)
 );
-Data mahasiswa disimpan di localStorage!
-Daftar Mahasiswa:
-Andi - Informatika
-Budi - Sistem Informasi
+
