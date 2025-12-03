@@ -28,5 +28,6 @@ const daftarPendaftar = JSON.parse(dataString);
 // Tampilkan data
 console.log("Daftar Pendaftar:");
 daftarPendaftar.forEach(function(p) {
-    console.log(${p.nama} - ${p.email} - ${p.gender});
+    console.log(`${p.nama} - ${p.email} - ${p.gender}`);
 });
+
