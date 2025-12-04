@@ -1,18 +1,40 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GUI Sederhana</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUI Sederhana</title>
 </head>
 <body>
-<h1 id="title">Halo, Mahasiswa!</h1>
-<button onclick="ubahTeks()">Klik Saya</button>
-<script>
-function ubahTeks() {
-document.getElementById("title").innerText = "Teks telah berubah!";
-}
 
-</script>
+    <h1 id="title">Halo, Mahasiswa!</h1>
+
+    <h2>Halo, Mahasiswa!</h2>
+
+    <p>terdapat seorang</p>
+
+    <ol>
+        <li>satu</li>
+        <li>dua</li>
+        <li>3</li>
+        <li>4</li>
+    </ol>
+
+    <!-- Gambar -->
+    <img src="https://avatars.githubusercontent.com/u/232995151?v=4" 
+         alt="gambar avatar" width="250">
+
+    <br><br>
+
+    <input type="text" id="inputText" placeholder="cobaan">
+    <button onclick="ubahTeks()">Klik Saya</button>
+
+    <script>
+        function ubahTeks() {
+            let value = document.getElementById("inputText").value;
+            document.getElementById("title").innerText = value || "Teks telah berubah!";
+        }
+    </script>
+
 </body>
 </html>
