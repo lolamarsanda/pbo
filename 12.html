@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GUI Sederhana</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+<title>GUI Sederhana</title>
 </head>
 <body>
-
-    <h1 id="title">Halo, Mahasiswa!</h1>
-
-    <h2>Halo, Mahasiswa!</h2>
-
-    <p>terdapat seorang</p>
-
+<h1 id="title">Halo, Mahasiswa!</h1>
+<h2>Halo, Mahasiswa!</h2>
+<b> tebal</b>
+<i> miring</i>
     <ol>
-        <li>satu</li>
-        <li>dua</li>
-        <li>3</li>
-        <li>4</li>
+      <li>satu</li>
+      <li>dua</li>
     </ol>
+  <table>
+<tr>  <td> 1 </td>  <td> 2 </td></tr>
+<tr>  <td> 3 </td>  <td> 4 </td></tr>  
+  </table>
 
-    <!-- Gambar -->
-    <img src="https://avatars.githubusercontent.com/u/232995151?v=4" 
-         alt="gambar avatar" width="250">
+<img src='https://avatars.githubusercontent.com/u/232995151?v=4'>
 
-    <br><br>
+  <form>
+<input type='text' value='cobaan'>
+<input type='submit' value='kirim'>
+    
+  </form>
 
-    <input type="text" id="inputText" placeholder="cobaan">
-    <button onclick="ubahTeks()">Klik Saya</button>
 
-    <script>
-        function ubahTeks() {
-            let value = document.getElementById("inputText").value;
-            document.getElementById("title").innerText = value || "Teks telah berubah!";
-        }
-    </script>
+  
+<button onclick="ubahTeks()">Klik Saya</button>
 
+  
+<script>
+function ubahTeks() {
+document.getElementById("title").innerText = "Teks telah berubah!";
+}
+</script>
 </body>
 </html>
